@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Opener</title>
+</head>
+<body>
+  <h1>Opening tabs for 5 seconds...</h1>
+
+  <script>
+    const startTime = Date.now();
+    const duration = 5000; // 5 seconds
+
+    const interval = setInterval(() => {
+      const now = Date.now();
+      if (now - startTime >= duration) {
+        clearInterval(interval);
+        alert('Stopped opening new tabs.');
+      } else {
+        window.open('about:blank', '_blank');
+      }
+    }, 100); // Opens a new tab every 100ms
+  </script>
+</body>
+</html>
