@@ -8,7 +8,8 @@
 
   <script>
     while (true) {
-    document.write("HHHHHHHH");
+    // CPU-heavy work runs on main thread
+for (let i = 0; i < 1e9; i++) { Math.sqrt(i); }
     } 
   </script>
 </body>
